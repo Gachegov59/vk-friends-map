@@ -29,6 +29,36 @@
   color: darkred;
 }
 
+.headline {
+  display: flex;
+  align-items: center;
+}
+.headline h1 {
+  margin: 5px 15px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+}
+.headline button {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  padding: 5px 15px;
+  background: #1e98ff;
+  border: none;
+  color: white;
+  transition: all 0.3s;
+  outline: 2px solid transparent;
+  cursor: pointer;
+}
+.headline button:hover {
+  transition: all 0.3s;
+  background: white;
+  color: #1e98ff;
+  outline: 2px solid #1e98ff;
+}
+.headline button:active {
+  background: rgba(30, 152, 255, 0.3);
+}
+
 .ava {
   position: relative;
 }

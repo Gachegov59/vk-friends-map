@@ -34,10 +34,44 @@
 
 }
 
-.ava{
+.headline {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin: 5px 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+  }
+
+  button {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    padding: 5px 15px;
+    background: #1e98ff;
+    border: none;
+    color: white;
+    transition: all .3s;
+    outline: 2px solid transparent;
+    cursor: pointer;
+    &:hover {
+      transition: all .3s;
+      background: white;
+      color: #1e98ff;
+      outline: 2px solid #1e98ff;
+    }
+    &:active {
+      background: rgba(#1e98ff, .3);
+    }
+  }
+}
+
+.ava {
   position: relative;
+
   &.online {
     padding: 0 5px;
+
     &::after {
       border: 2px solid #fff;
       position: absolute;

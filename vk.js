@@ -1,6 +1,7 @@
 /* eslint-disable */
 VK.init({
     apiId: 7782703
+    // apiId: 7802630
 })
 
 export function auth() {

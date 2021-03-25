@@ -3,22 +3,27 @@ import {auth, vkAPI} from './vk.js'
 
 let myMap
 let clusterer
+let btn = document.querySelector('.load-vk')
+
 
 ymaps.ready(async () => {
-    const cache = new Map();
-    // console.log('cache', cache)
-    await auth()
 
+    btn.addEventListener('click', connectVk )
+
+    const cache = new Map();
+    myMap = new ymaps.Map('map', {
+        center: [58.01, 56.23],
+        zoom: 8,
+        controls: ['smallMapDefaultSet'],
+    }, {searchControlProvider: 'yandex#search'});
+
+   async function connectVk() {
+    await auth()
     const [me] = await vkAPI('users.get', {fields: 'city, country'})
     const friends = await vkAPI('friends.get', {fields: 'city,relation,domain, country,bdate, domain, online, photo_100, photo_200'})
 
     friends.items.push(me)
 
-    myMap = new ymaps.Map('map', {
-        center: [58.01, 56.23],
-        zoom: 10,
-        controls: ['smallMapDefaultSet'],
-    }, {searchControlProvider: 'yandex#search'});
 
     let customItemContentLayout = ymaps.templateLayoutFactory.createClass(
         '<div class="wrapper">' +
@@ -61,7 +66,6 @@ ymaps.ready(async () => {
         return cache.get(address)
     }
 
-
     // console.log('friends.items', friends.items)
 
     friends.items
@@ -103,8 +107,7 @@ ymaps.ready(async () => {
             clusterer.add(placemark)
             myMap.setBounds(clusterer.getBounds());
         })
-
-
+    }
 })
 
 
