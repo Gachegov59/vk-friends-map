@@ -8,8 +8,8 @@ export function auth() {
     return new Promise((res, rej) => {
         VK.Auth.login(data => {
 
-            if (data.status === "connected") {
-                console.log(data.status === "connected")
+            if (data.session) {
+                console.log(data)
                 res();
             } else {
                 rej(new Error('не удалось авторизоватсья'))

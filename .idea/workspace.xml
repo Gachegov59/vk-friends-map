@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc3026-50d3-464a-9f52-1bfbc8e2abfe" name="Default Changelist" comment="map | fixes">
+    <list default="true" id="76bc3026-50d3-464a-9f52-1bfbc8e2abfe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/index.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vk.js" beforeDir="false" afterPath="$PROJECT_DIR$/vk.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616673260141</updated>
-      <workItem from="1616673261229" duration="6156000" />
+      <workItem from="1616673261229" duration="6751000" />
     </task>
     <task id="LOCAL-00001" summary="map">
       <created>1616673424985</created>
@@ -123,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616689042182</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="map | fixes">
+      <created>1616691239488</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616691239488</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,10 +152,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="map | fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="897" y="3" key="CommitChangelistDialog2" timestamp="1616691224243">
+    <state x="897" y="3" key="CommitChangelistDialog2" timestamp="1616691238845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="897" y="3" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040/3840.0.1280.680@0.0.1920.1040" timestamp="1616691224243" />
+    <state x="897" y="3" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040/3840.0.1280.680@0.0.1920.1040" timestamp="1616691238845" />
     <state x="169" y="299" key="EditFileWatcherDialog" timestamp="1616673323670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -208,10 +212,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="852" y="257" key="IDE.errors.dialog/0.0.1920.1040/1920.0.1920.1040/3840.0.1280.680@0.0.1920.1040" timestamp="1616673687231" />
-    <state x="864" y="251" key="Vcs.Push.Dialog.v2" timestamp="1616689059443">
+    <state x="864" y="251" key="Vcs.Push.Dialog.v2" timestamp="1616691242516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="864" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040/3840.0.1280.680@0.0.1920.1040" timestamp="1616689059443" />
+    <state x="864" y="251" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040/3840.0.1280.680@0.0.1920.1040" timestamp="1616691242516" />
     <state x="1089" y="432" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1616673677231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
