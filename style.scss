@@ -1,0 +1,54 @@
+.friends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.friend {
+  width: 100px;
+  margin: 10px;
+}
+
+.friend img {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  align-items: baseline;
+
+  h2 {
+    margin-right: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    transition: all .3s ease;
+
+    &:hover {
+      color: darkred;
+    }
+  }
+
+
+}
+
+.ava{
+  position: relative;
+  &.online {
+    padding: 0 5px;
+    &::after {
+      border: 2px solid #fff;
+      position: absolute;
+      top: -5px;
+      left: 0;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background: #4bb34b;
+    }
+  }
+}
