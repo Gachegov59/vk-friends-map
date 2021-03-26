@@ -1,5 +1,6 @@
 /*eslint-disable */
 import {auth, vkAPI} from './vk.js'
+import {customItemContentLayout} from './template.js'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -12,32 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', connectVk)
 
         const cache = new Map();
+
         myMap = new ymaps.Map('map', {
             center: [58.01, 56.23],
             zoom: 8,
             controls: ['smallMapDefaultSet'],
         }, {searchControlProvider: 'yandex#search'});
-
-        let customItemContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div class="wrapper">' +
-            '<h2 class=ballon_header>{{ properties.friendInfo.name}} {{ properties.friendInfo.lastName }}</h2>' +
-            '<a href="https://vk.com/{{ properties.friendInfo.domain }}" target="_blank">Страница</a>' +
-            '</div>' +
-            '{% if properties.friendInfo.online %}' +
-            '<div class="ava online">' +
-            '<img class=ballon_body src="{{ properties.friendInfo.photo }}">' +
-            '{% else %}' +
-            '<div class="ava">' +
-            '<img class=ballon_body src="{{ properties.friendInfo.photo }}">' +
-            '</div>' +
-            '{% endif %}'
-        );
         clusterer = new ymaps.Clusterer({
             clusterDisableClickZoom: true,
             clusterOpenBalloonOnClick: true,
             clusterBalloonContentLayout: 'cluster#balloonCarousel',
             clusterBalloonItemContentLayout: customItemContentLayout,
-
         })
 
         async function connectVk() {
@@ -69,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
             friends.items
                 .filter(friend => friend.first_name !== 'DELETED' && friend.country && friend.country.title)
                 .map(friend => {
-                    let place = friend.country.title
                     let friendInfo = {
                         name: friend.first_name,
                         lastName: friend.last_name,
@@ -78,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         online: friend.online,
                         domain: friend.domain,
                     }
+
+                    let place = friend.country.title
                     if (friend.city) {
                         place += ' ' + friend.city.title
                     }
@@ -87,10 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     const coord = await geocode(friendObj.place)
                     const placemark = new ymaps.Placemark(coord, {
                         friendInfo: friendObj.friendInfo,
-                        // name: friendObj.friendInfo.name,
-                        // lastName: friendObj.friendInfo.lastName,
-                        // photo: friendObj.friendInfo.photo,
-                        // online: friendObj.friendInfo.online,
                         hintContent:
                             `<a href="https://vk.com/${friendObj.friendInfo.domain}" target="_blank">` +
                             `<div class='a_name'>${friendObj.friendInfo.name}</div> ` +
