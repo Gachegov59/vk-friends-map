@@ -26,7 +26,7 @@ export function auth() {
 }
 
 export function vkAPI(method, params) {
-    params.v = '5.76';
+    params.v = '5.81';
 
     return new Promise((res, rej) => {
         VK.api(method, params, (data) => {
